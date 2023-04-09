@@ -19,7 +19,7 @@ pH = round(-(np.log10(H_OH)),2)
 if st.button('Tampilkan nilai pH') :
     if mmol_titran > mmol_titrat :
         st.write('nilai pH adalah : ',14 - pH)
-    elif mmol_titran == mmol_titrat : 
+    elif sisa_mmol = 0 : 
         st.write('nilai pH adalah : ',  7)
     else :
         st.write('nilai pH adalah : ', pH)
