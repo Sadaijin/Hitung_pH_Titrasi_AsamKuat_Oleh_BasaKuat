@@ -12,7 +12,7 @@ mmol_titrat = M_titrat * V_titrat
 mmol_titran = M_titran * V_titran
 V_total = V_titrat + V_titran
 
-np.seterr(divide='ignore')
+np.seterr(divide='ignore', invalid='ignore')
 sisa_mmol = abs(mmol_titran - mmol_titrat)
 H_OH = sisa_mmol/V_total
 
