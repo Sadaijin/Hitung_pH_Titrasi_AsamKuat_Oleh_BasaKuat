@@ -13,8 +13,8 @@ mmol_titran = M_titran * V_titran
 V_total = V_titrat + V_titran
 
 sisa_mmol = abs(mmol_titran - mmol_titrat)
-np.seterr(divide='ignore')
 H_OH = sisa_mmol/V_total
+np.seterr(divide='ignore')
 
 pH = round(-(np.log10(H_OH)),2) 
 if st.button('Tampilkan nilai pH') :
