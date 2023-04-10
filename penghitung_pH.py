@@ -1,5 +1,7 @@
 import streamlit as st
 import numpy as np
+np.seterr(divide='ignore', invalid='ignore')
+
 st.title('Ini adalah web aplikasi penghitung pH :red[titrasi Asam Kuat oleh Basa Kuat]')
 
 M_titrat = st.number_input('Masukkan Molaritas titrat', step = 0.0001, format = "%.4f")
@@ -12,7 +14,6 @@ mmol_titrat = M_titrat * V_titrat
 mmol_titran = M_titran * V_titran
 V_total = V_titrat + V_titran
 
-np.seterr(divide='ignore', invalid='ignore')
 sisa_mmol = abs(mmol_titran - mmol_titrat)
 H_OH = sisa_mmol/V_total
 
